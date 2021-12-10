@@ -1,3 +1,3 @@
 FROM alpine:latest
 
-RUN apk --no-cache add zip
+RUN apk --no-cache add build-base
