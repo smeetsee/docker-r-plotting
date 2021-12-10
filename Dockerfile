@@ -1,3 +1,3 @@
 FROM alpine:latest
 
-RUN apk --no-cache add valgrind grep
+RUN apk --no-cache add curl jq sed
