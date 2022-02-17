@@ -1,3 +1,3 @@
-FROM alpine:latest
+FROM python:3.10
 
-RUN apk --no-cache add curl jq sed
+RUN python -m pip install --no-cache-dir pandas numpy
