@@ -1,3 +1,3 @@
-FROM python:3.12
+FROM r-base:latest
 
-RUN python -m pip install --no-cache-dir pandas numpy xlrd
+RUN Rscript -e "install.packages(c('ggplot2', 'broom'), repos='https://cloud.r-project.org')"
