@@ -30,7 +30,6 @@ jobs:
         platform:
           - linux/amd64
           - linux/arm64
-          - linux/arm/v7
     permissions:
       contents: read
       packages: write
@@ -136,8 +135,7 @@ jobs:
           docker buildx imagetools create \
             -t ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest \
             ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:linux-amd64 \
-            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:linux-arm64 \
-            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:linux-arm-v7
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:linux-arm64
 
       - name: Inspect image
         run: |
